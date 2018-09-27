@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Test intersection</title>
+	<title>Lazy Loading</title>
 	<style>
 		.box {
 			max-width: 768px;
@@ -15,6 +15,8 @@
 			border-top: 1px solid #CCC;
 			border-bottom: 1px solid #CCC;
 			margin: 30px 0;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAAAjCAMAAADSULa0AAAApVBMVEX///9Xpuyu1PYAb+BEnOnY6vsJfeMAcOAAdeEAc+ECeOL0+v77/f/5/P6Wx/M3lejx+P79/v8qjucdh+USgOQAbeAVg+S93PhNoOsykue01/en0PWJwfLt9f3g7/x6uPBmru1eqe0HeeJRo+s/mekli+YNfuPq9P2izvRztO/k8fxInuprsO7M5PmDvfHa7PuRxPLT6PrI4vnC3/jW6fqr0vWdy/TlhAd6AAABtElEQVRIx+3UV5OCMBAAYDRCsoEA0otIEbB3z///0w7h9NQBy8043oP7kBfgm2VLOO4T74nQ6b1ATc3BC9QObv1/dcffVdmWPWdu42R1UpndC+V19UDd8QWlLnm1OC1XHj5Min6HIuIfVVsBhEAIy8TaidGfjLM8mRXvuQjr4e4hc9LTAFnRRqpUsChk09QACEsV8oVuAkGHwgxlhaA8trv3zPnMQqD1+qduEZp6YlFmBYRDVm1CIY98e9SuSusNBJOmI/UGyTwnMen0SzyfgU6V9FyARaU6l/+8HusYskW/wQxkl2BrtqmfrK6Cp6Uq8NcfHgqBrWheq65Mki+CxnmNscZKta49duFmYp3q6UCV1aRJHWNdbFCZHRuQxPXTO5TdsvtNalavlpNgXH52p12/agsr3Rr10Czc3Kz60TqpTMMz7lotB4vcHqyzNcBGtLxU94TaV6q0d4slaN1fguPKptT8uQfA3RRdEEcGHkhXqpojPeSful5aox8ViOY4GsFuv9rYM9V54nI51qw8B8bUoRiDEFcj5xn6Kbuu9NdrVg0Yt/Zl/5ggCwKJ+8QnPvGW+AZE9CR6ByJr6wAAAABJRU5ErkJggg==');
+			background-repeat: repeat-y;
 		}
 		img {
 			max-width: 100%;
@@ -32,18 +34,18 @@
 </head>
 <body>
 	<div class="box">
-		<h1>Intersection test</h1>
+		<h1>Lazy Loading</h1>
 		<p>
-			This begins by setting up an options object containing the settings for the observer. We want to watch for changes in visibility of the target element relative to the document's viewport, so root is null. We need no margin, so the margin offset, rootMargin, is specified as "0px". This causes the observer to watch for changes in the intersection between the target element's bounds and those of the viewport, without any added (or subtracted) space.
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		</p>
 		<div class="spacer"></div>
 		<p>
-			This begins by setting up an options object containing the settings for the observer. We want to watch for changes in visibility of the target element relative to the document's viewport, so root is null. We need no margin, so the margin offset, rootMargin, is specified as "0px". This causes the observer to watch for changes in the intersection between the target element's bounds and those of the viewport, without any added (or subtracted) space.
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		</p>
 		<div class="spacer"></div>
-		<img height="620" width="1168" data-src="http://www.negretti.com.br/wp-content/uploads/2017/04/seo-google-1168x620.jpg" />
+		<img data-src="https://images.unsplash.com/photo-1538037119734-bdbeddb81edd" />
 		<div class="spacer"></div>
-		<img height="620" width="1168" data-src="http://www.negretti.com.br/wp-content/uploads/2017/04/seo-google-1168x620.jpg" />
+		<img data-src="https://images.unsplash.com/photo-1538032796273-6c06986a6ac6" />
 		<div class="spacer"></div>
 	</div>
 	<script>
