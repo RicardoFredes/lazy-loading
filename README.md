@@ -22,4 +22,4 @@ If you want use animation to show the images when scrolling in view page, includ
 
 ## Demo
 
-[See a sample](https://jsfiddle.net/shcj9L5t/2/)
+[See a exemplo](https://jsfiddle.net/shcj9L5t/2/)
